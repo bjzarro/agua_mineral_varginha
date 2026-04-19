@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Água Mineral Varginha - Água pura direto da fonte. Entrega rápida em Varginha e região. Galões 20L, fardos e fornecimento para empresas." />
+<title>Água Mineral Varginha | Pureza Direto da Fonte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" href="https://aguamineralvarginha.com.br/wp-content/uploads/2020/04/13.-logo_amv_original.png">
+<style>
+  :root {
+    --azul-profundo: #0a4d8c;
+    --azul-primario: #0f6fb8;
+    --azul-claro: #2d9cdb;
+    --azul-suave: #e6f4fb;
+    --verde-agua: #56c1c9;
+    --branco: #ffffff;
+    --cinza-claro: #f7fafc;
+    --cinza-texto: #4a5568;
+    --cinza-escuro: #1a202c;
+    --verde-wpp: #25D366;
+    --verde-wpp-hover: #1ebe5d;
+    --sombra-suave: 0 8px 24px rgba(15, 111, 184, 0.12);
+    --sombra-forte: 0 16px 40px rgba(15, 111, 184, 0.22);
+    --radius: 14px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background: var(--branco);
+  }
+
+  h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; line-height: 1.2; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- HEADER ---------- */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    transition: all .3s ease;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  header.scrolled { box-shadow: 0 4px 18px rgba(0,0,0,0.08); }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { height: 50px; width: auto; }
+  .nav-logo span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--azul-profundo);
+    font-size: 1.05rem;
+    line-height: 1.1;
+  }
+  .nav-menu { display: flex; gap: 28px; align-items: center; }
+  .nav-menu a {
+    font-weight: 500;
+    color: var(--cinza-texto);
+    font-size: .95rem;
+    transition: color .2s;
+  }
+  .nav-menu a:hover { color: var(--azul-primario); }
+  .nav-cta {
+    background: var(--verde-wpp);
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all .25s;
+  }
+  .nav-cta:hover { background: var(--verde-wpp-hover); transform: translateY(-2px); }
+  .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--azul-profundo); cursor: pointer; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 120px 0 80px;
+    background:
+      linear-gradient(135deg, rgba(10, 77, 140, 0.85) 0%, rgba(15, 111, 184, 0.75) 60%, rgba(45, 156, 219, 0.65) 100%),
+      url('https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+    color: #fff;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.18), transparent 55%);
+    pointer-events: none;
+  }
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: .85rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
+  }
+  .hero-badge i { color: #7fd4ff; }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+  .hero h1 span { color: #7fd4ff; }
+  .hero p.sub {
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    margin-bottom: 36px;
+    opacity: 0.95;
+    max-width: 560px;
+  }
+  .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all .28s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+  .btn-primary {
+    background: var(--verde-wpp);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, .35);
+  }
+  .btn-primary:hover {
+    background: var(--verde-wpp-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(37, 211, 102, .45);
+  }
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+
+  .hero-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    padding: 32px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+  }
+  .hero-card img {
+    max-height: 150px;
+    margin: 0 auto 20px;
+    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
+  }
+  .hero-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+  .hero-card p { opacity: .9; font-size: .95rem; margin-bottom: 20px; }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  .hero-stats div strong {
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Montserrat';
+    color: #7fd4ff;
+  }
+  .hero-stats div span { font-size: .75rem; opacity: .85; }
+
+  .wave {
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    line-height: 0;
+    z-index: 2;
+  }
+  .wave svg { width: 100%; height: 80px; display: block; }
+
+  /* ---------- SECTIONS GERAL ---------- */
+  section { padding: 90px 0; }
+  .section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 60px;
+  }
+  .section-tag {
+    display: inline-block;
+    background: var(--azul-suave);
+    color: var(--azul-primario);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: .85rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .section-header h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    color: var(--cinza-escuro);
+    margin-bottom: 14px;
+  }
+  .section-header h2 span { color: var(--azul-primario); }
+  .section-header p { color: var(--cinza-texto); font-size: 1.05rem; }
+
+  /* ---------- BENEFÍCIOS ---------- */
+  .beneficios { background: var(--cinza-claro); }
+  .beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+  }
+  .beneficio-card {
+    background: #fff;
+    padding: 36px 28px;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: all .3s;
+    border: 1px solid transparent;
+    box-shadow: var(--sombra-suave);
+  }
+  .beneficio-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--azul-claro);
+    box-shadow: var(--sombra-forte);
+  }
+  .beneficio-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--azul-primario), var(--azul-claro));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.7rem;
+    box-shadow: 0 10px 20px rgba(15, 111, 184, .25);
+  }
+  .beneficio-card h3 { font-size: 1.15rem; margin-bottom: 10px; color: var(--cinza-escuro); }
+  .beneficio-card p { color: var(--cinza-texto); font-size: .95rem; }
+
+  /* ---------- SOBRE ---------- */
+  .sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .sobre-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra-forte);
+    aspect-ratio: 4/5;
+    background: url('https://images.unsplash.com/photo-1519455953755-af066f52f1a6?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+  }
+  .sobre-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(10,77,140,.45));
+  }
+  .sobre-badge {
+    position: absolute;
+    bottom: 24px; left: 24px; right: 24px;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    padding: 18px 20px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 2;
+  }
+  .sobre-badge i {
+    font-size: 1.6rem;
+    color: var(--azul-primario);
+    background: var(--azul-suave);
+    padding: 12px;
+    border-radius: 12px;
+  }
+  .sobre-badge strong { display: block; font-family: 'Montserrat'; color: var(--cinza-escuro); }
+  .sobre-badge span { font-size: .85rem; color: var(--cinza-texto); }
+
+  .sobre-texto h2 {
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    margin-bottom: 20px;
+    color: var(--cinza-escuro);
+  }
+  .sobre-texto h2 span { color: var(--azul-primario); }
+  .sobre-texto p {
+    color: var(--cinza-texto);
+    margin-bottom: 16px;
+    font-size: 1.02rem;
+  }
+  .sobre-lista {
+    list-style: none;
+    margin: 24px 0 32px;
+  }
+  .sobre-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: var(--cinza-texto);
+  }
+  .sobre-lista i {
+    color: var(--verde-agua);
+    background: rgba(86, 193, 201, .12);
+    padding: 6px;
+    border-radius: 50%;
+    font-size: .75rem;
+    margin-top: 3px;
+  }
+  .sobre-lista strong { color: var(--cinza-escuro); }
+
+  /* ---------- PRODUTOS ---------- */
+  .produtos { background: var(--cinza-claro); position: relative; }
+  .produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+  .produto-card {
+    background: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all .3s;
+    box-shadow: var(--sombra-suave);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .produto-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-forte); }
+  .produto-img {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--azul-suave), #fff);
+    position: relative;
+    overflow: hidden;
+  }
+  .produto-img i {
+    font-size: 5rem;
+    color: var(--azul-primario);
+    z-index: 1;
+    filter: drop-shadow(0 8px 16px rgba(15,111,184,.2));
+  }
+  .produto-img::before {
+    content: "";
+    position: absolute;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(45,156,219,.18), transparent 70%);
+  }
+  .produto-badge {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: var(--verde-agua);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: .75rem;
+    font-weight: 600;
+    z-index: 2;
+  }
+  .produto-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+  .produto-body h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--cinza-escuro); }
+  .produto-body p { color: var(--cinza-texto); margin-bottom: 20px; font-size: .95rem; flex: 1; }
+  .produto-features {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .produto-features li {
+    font-size: .9rem;
+    color: var(--cinza-texto);
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .produto-features i { color: var(--verde-agua); font-size: .8rem; }
+  .produto-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px;
+    background: var(--verde-wpp);
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all .25s;
+  }
+  .produto-cta:hover { background: var(--verde-wpp-hover); transform: scale(1.02); }
+
+  /* ---------- DEPOIMENTOS ---------- */
+  .depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 28px;
+  }
+  .depo-card {
+    background: #fff;
+    padding: 32px 28px;
+    border-radius: var(--radius);
+    border: 1px solid #e9eef5;
+    position: relative;
+    transition: all .3s;
+  }
+  .depo-card::before {
+    content: "\201C";
+    position: absolute;
+    top: -16px; left: 24px;
+    font-size: 6rem;
+    font-family: Georgia, serif;
+    color: var(--azul-primario);
+    opacity: .22;
+    line-height: 1;
+  }
+  .depo-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--azul-claro);
+    box-shadow: var(--sombra-suave);
+  }
+  .depo-stars { color: #f5b700; margin-bottom: 16px; }
+  .depo-texto {
+    color: var(--cinza-texto);
+    font-size: .98rem;
+    margin-bottom: 24px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+  .depo-autor { display: flex; align-items: center; gap: 14px; }
+  .depo-avatar {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--azul-primario), var(--verde-agua));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Montserrat';
+  }
+  .depo-autor strong { display: block; color: var(--cinza-escuro); font-family: 'Montserrat'; }
+  .depo-autor span { font-size: .85rem; color: var(--cinza-texto); }
+
+  /* ---------- CTA FORTE ---------- */
+  .cta-forte {
+    background:
+      linear-gradient(135deg, rgba(10,77,140,0.95), rgba(15,111,184,0.92)),
+      url('https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-forte h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 16px;
+  }
+  .cta-forte p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 36px;
+    opacity: .95;
+  }
+  .urgencia {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: .9rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
+  }
+  .urgencia .pulse {
+    width: 10px; height: 10px;
+    background: #7fd4ff;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: .5; transform: scale(1.4); }
+  }
+  .cta-forte .btn {
+    padding: 20px 40px;
+    font-size: 1.1rem;
+  }
+
+  /* ---------- CONTATO ---------- */
+  .contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .contato-info h2 {
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    margin-bottom: 16px;
+  }
+  .contato-info h2 span { color: var(--azul-primario); }
+  .contato-info > p {
+    color: var(--cinza-texto);
+    margin-bottom: 30px;
+  }
+  .contato-item {
+    display: flex;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e9eef5;
+  }
+  .contato-item:last-child { border-bottom: none; }
+  .contato-item i {
+    width: 50px;
+    height: 50px;
+    background: var(--azul-suave);
+    color: var(--azul-primario);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+  .contato-item strong {
+    display: block;
+    font-family: 'Montserrat';
+    color: var(--cinza-escuro);
+    margin-bottom: 4px;
+  }
+  .contato-item a, .contato-item p {
+    color: var(--cinza-texto);
+    transition: color .2s;
+  }
+  .contato-item a:hover { color: var(--azul-primario); }
+
+  .mapa {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    height: 100%;
+    min-height: 420px;
+  }
+  .mapa iframe { width: 100%; height: 100%; border: none; display: block; }
+
+  /* ---------- RODAPÉ ---------- */
+  footer {
+    background: var(--cinza-escuro);
+    color: #cbd5e0;
+    padding: 60px 0 20px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .footer-logo img {
+    height: 60px;
+    background: #fff;
+    padding: 6px;
+    border-radius: 10px;
+  }
+  .footer-logo strong {
+    font-family: 'Montserrat';
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  footer p { font-size: .92rem; line-height: 1.7; }
+  footer h4 {
+    color: #fff;
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+  }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 10px; font-size: .92rem; }
+  footer ul li a { transition: color .2s; display: inline-flex; align-items: center; gap: 8px; }
+  footer ul li a:hover { color: var(--azul-claro); }
+  footer ul li i { color: var(--azul-claro); width: 16px; }
+  .footer-bottom {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    font-size: .85rem;
+    color: #94a3b8;
+  }
+  .footer-bottom a { color: var(--azul-claro); }
+
+  /* ---------- WHATSAPP FLUTUANTE ---------- */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 28px; right: 28px;
+    width: 60px; height: 60px;
+    background: var(--verde-wpp);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, .4);
+    z-index: 999;
+    transition: all .3s;
+    animation: floatPulse 2.5s infinite;
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    animation: none;
+  }
+  @keyframes floatPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, .6); }
+    50% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  }
+
+  /* ---------- ANIMAÇÕES ---------- */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .7s cubic-bezier(.25,.8,.25,1);
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---------- RESPONSIVO ---------- */
+  @media (max-width: 900px) {
+    .hero-content, .sobre-grid, .contato-grid, .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .sobre-image { max-width: 420px; margin: 0 auto; width: 100%; }
+    .hero { padding: 100px 0 60px; }
+    section { padding: 70px 0; }
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: #fff;
+      flex-direction: column;
+      padding: 20px;
+      gap: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    }
+    .nav-menu.active { display: flex; }
+    .menu-toggle { display: block; }
+    .hero-stats div strong { font-size: 1.2rem; }
+    .nav-logo span { font-size: .9rem; }
+  }
+  @media (max-width: 480px) {
+    .container { padding: 0 18px; }
+    .hero-cta { flex-direction: column; width: 100%; }
+    .hero-cta .btn { width: 100%; justify-content: center; }
+    .whatsapp-float { width: 54px; height: 54px; font-size: 1.5rem; bottom: 20px; right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <nav class="nav">
+    <a href="#" class="nav-logo">
+      <img src="https://aguamineralvarginha.com.br/wp-content/uploads/2020/04/13.-logo_amv_original.png" alt="Água Mineral Varginha">
+      <span>Água Mineral<br>Varginha</span>
+    </a>
+    <div class="nav-menu" id="navMenu">
+      <a href="#beneficios">Benefícios</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+      <a href="https://wa.me/5535988686022?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20produtos." target="_blank" class="nav-cta">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge"><i class="fas fa-award"></i> Tradição em Varginha/MG desde sempre</div>
+        <h1>Pureza que nasce <span>direto da fonte</span> para sua família e empresa</h1>
+        <p class="sub">Água mineral cristalina, engarrafada com rigor e entregue com rapidez em toda Varginha e região. Saúde, qualidade e confiança em cada gota.</p>
+        <div class="hero-cta">
+          <a href="https://wa.me/5535988686022?text=Olá!%20Quero%20fazer%20um%20pedido%20de%20água%20mineral." target="_blank" class="btn btn-primary">
+            <i class="fab fa-whatsapp"></i> Peça no WhatsApp
+          </a>
+          <a href="tel:+553532141736" class="btn btn-outline">
+            <i class="fas fa-phone"></i> (35) 3214-1736
+          </a>
+        </div>
+      </div>
+      <div class="hero-card fade-in">
+        <img src="https://aguamineralvarginha.com.br/wp-content/uploads/2020/04/13.-logo_amv_original.png" alt="Logo Água Mineral Varginha">
+        <h3>Atendimento Rápido</h3>
+        <p>Entregamos o mesmo dia em Varginha e cidades vizinhas.</p>
+        <div class="hero-stats">
+          <div><strong>+20</strong><span>Anos de tradição</span></div>
+          <div><strong>100%</strong><span>Água da fonte</span></div>
+          <div><strong>24h</strong><span>Pedidos no WPP</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#ffffff" d="M0,32L60,37.3C120,43,240,53,360,53.3C480,53,600,43,720,37.3C840,32,960,32,1080,37.3C1200,43,1320,53,1380,58.7L1440,64L1440,80L0,80Z"/>
+    </svg>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="beneficios" id="beneficios">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Por que escolher</span>
+      <h2>Qualidade que você <span>sente na primeira gota</span></h2>
+      <p>Somos referência em Varginha porque unimos natureza, tecnologia e cuidado em cada etapa da produção.</p>
+    </div>
+    <div class="beneficios-grid">
+      <div class="beneficio-card fade-in">
+        <div class="beneficio-icon"><i class="fas fa-mountain"></i></div>
+        <h3>Direto da Fonte</h3>
+        <p>Nossa água vem de fontes naturais protegidas em área rural, mantendo sua pureza original.</p>
+      </div>
+      <div class="beneficio-card fade-in">
+        <div class="beneficio-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Qualidade Garantida</h3>
+        <p>Processo de engarrafamento controlado e seguindo todas as normas sanitárias vigentes.</p>
+      </div>
+      <div class="beneficio-card fade-in">
+        <div class="beneficio-icon"><i class="fas fa-truck-fast"></i></div>
+        <h3>Entrega Rápida</h3>
+        <p>Entregamos no mesmo dia em Varginha e região. Peça pela manhã, receba à tarde.</p>
+      </div>
+      <div class="beneficio-card fade-in">
+        <div class="beneficio-icon"><i class="fas fa-heart"></i></div>
+        <h3>Saúde em 1º Lugar</h3>
+        <p>Água mineral com sais naturais que contribuem para o bem-estar da sua família.</p>
+      </div>
+      <div class="beneficio-card fade-in">
+        <div class="beneficio-icon"><i class="fas fa-handshake"></i></div>
+        <h3>Confiança Local</h3>
+        <p>Empresa tradicional de Varginha, atendendo famílias e empresas há mais de duas décadas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-image fade-in">
+        <div class="sobre-badge">
+          <i class="fas fa-leaf"></i>
+          <div>
+            <strong>Fazenda Sete Capotes</strong>
+            <span>Fonte protegida em zona rural de Varginha/MG</span>
+          </div>
+        </div>
+      </div>
+      <div class="sobre-texto fade-in">
+        <span class="section-tag">Nossa História</span>
+        <h2>Uma tradição de <span>pureza mineira</span></h2>
+        <p>A <strong>Água Mineral Varginha</strong> nasceu do compromisso de levar água pura e de qualidade para famílias e empresas da nossa cidade. Localizada na tranquila Fazenda Sete Capotes, em zona rural preservada, nossa fonte é protegida pelo ambiente natural que a cerca.</p>
+        <p>Cada garrafa, galão e fardo que sai da nossa fábrica carrega a pureza das terras mineiras e o cuidado de quem entende que água é vida — e qualidade não é opcional.</p>
+        <ul class="sobre-lista">
+          <li><i class="fas fa-check"></i><div><strong>Fonte natural protegida</strong> em ambiente rural de Varginha/MG</div></li>
+          <li><i class="fas fa-check"></i><div><strong>Processo controlado</strong> do engarrafamento à entrega</div></li>
+          <li><i class="fas fa-check"></i><div><strong>Atendimento personalizado</strong> para residências e empresas</div></li>
+          <li><i class="fas fa-check"></i><div><strong>Compromisso com a comunidade</strong> de Varginha e região</div></li>
+        </ul>
+        <a href="https://wa.me/5535988686022?text=Olá!%20Quero%20conhecer%20mais%20sobre%20a%20empresa." target="_blank" class="btn btn-primary">
+          <i class="fab fa-whatsapp"></i> Fale Conosco
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="produtos" id="produtos">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Nossos Produtos</span>
+      <h2>Água pura para <span>cada necessidade</span></h2>
+      <p>Opções ideais para sua casa, escritório ou empresa. Peça agora e receba rapidamente.</p>
+    </div>
+    <div class="produtos-grid">
+      <div class="produto-card fade-in">
+        <div class="produto-img">
+          <span class="produto-badge">Mais Pedido</span>
+          <i class="fas fa-prescription-bottle"></i>
+        </div>
+        <div class="produto-body">
+          <h3>Galão 20 Litros</h3>
+          <p>O favorito das famílias e escritórios. Durável, prático e com água sempre fresca.</p>
+          <ul class="produto-features">
+            <li><i class="fas fa-check-circle"></i> Ideal para consumo diário</li>
+            <li><i class="fas fa-check-circle"></i> Entrega e troca de galão</li>
+            <li><i class="fas fa-check-circle"></i> Lacre de segurança</li>
+          </ul>
+          <a href="https://wa.me/5535988686022?text=Olá!%20Quero%20pedir%20galões%20de%2020%20litros." target="_blank" class="produto-cta">
+            <i class="fab fa-whatsapp"></i> Pedir Agora
+          </a>
+        </div>
+      </div>
+
+      <div class="produto-card fade-in">
+        <div class="produto-img">
+          <span class="produto-badge">Família</span>
+          <i class="fas fa-boxes-stacked"></i>
+        </div>
+        <div class="produto-body">
+          <h3>Fardos de Água</h3>
+          <p>Fardos com garrafas de 500ml, 1,5L e 5L. Perfeitos para eventos, viagens e dia a dia.</p>
+          <ul class="produto-features">
+            <li><i class="fas fa-check-circle"></i> Diversos tamanhos disponíveis</li>
+            <li><i class="fas fa-check-circle"></i> Preço especial por quantidade</li>
+            <li><i class="fas fa-check-circle"></i> Embalagens lacradas</li>
+          </ul>
+          <a href="https://wa.me/5535988686022?text=Olá!%20Quero%20pedir%20fardos%20de%20água." target="_blank" class="produto-cta">
+            <i class="fab fa-whatsapp"></i> Pedir Agora
+          </a>
+        </div>
+      </div>
+
+      <div class="produto-card fade-in">
+        <div class="produto-img">
+          <span class="produto-badge">Empresarial</span>
+          <i class="fas fa-building"></i>
+        </div>
+        <div class="produto-body">
+          <h3>Fornecimento para Empresas</h3>
+          <p>Plano contínuo e personalizado de abastecimento para seu negócio. Preço diferenciado.</p>
+          <ul class="produto-features">
+            <li><i class="fas fa-check-circle"></i> Contratos mensais flexíveis</li>
+            <li><i class="fas fa-check-circle"></i> Atendimento prioritário</li>
+            <li><i class="fas fa-check-circle"></i> Preços especiais B2B</li>
+          </ul>
+          <a href="https://wa.me/5535988686022?text=Olá!%20Quero%20um%20orçamento%20para%20minha%20empresa." target="_blank" class="produto-cta">
+            <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimentos" id="depoimentos">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-tag">Depoimentos</span>
+      <h2>O que nossos <span>clientes dizem</span></h2>
+      <p>A confiança conquistada ao longo dos anos é o nosso maior orgulho.</p>
+    </div>
+    <div class="depoimentos-grid">
+      <div class="depo-card fade-in">
+        <div class="depo-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="depo-texto">"Peço há mais de 5 anos para minha casa. A água tem um sabor incrível, e a entrega nunca atrasa. Virou parte da rotina da família!"</p>
+        <div class="depo-autor">
+          <div class="depo-avatar">MR</div>
+          <div>
+            <strong>Marcela Ribeiro</strong>
+            <span>Cliente residencial · Varginha</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card fade-in">
+        <div class="depo-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="depo-texto">"Fornecem água para nosso escritório há 3 anos. Atendimento excepcional, preço justo e qualidade que nossos clientes elogiam."</p>
+        <div class="depo-autor">
+          <div class="depo-avatar">CT</div>
+          <div>
+            <strong>Carlos Teixeira</strong>
+            <span>Sócio · Escritório Teixeira Advocacia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card fade-in">
+        <div class="depo-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="depo-texto">"Somos um restaurante e precisávamos de um fornecedor de confiança. A Água Mineral Varginha entrega pontualmente e com qualidade garantida."</p>
+        <div class="depo-autor">
+          <div class="depo-avatar">JA</div>
+          <div>
+            <strong>Juliana Andrade</strong>
+            <span>Proprietária · Restaurante Sabor da Serra</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card fade-in">
+        <div class="depo-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="depo-texto">"Atendimento humano, água limpíssima e entrega rápida. Recomendo de olhos fechados para qualquer pessoa em Varginha."</p>
+        <div class="depo-autor">
+          <div class="depo-avatar">RF</div>
+          <div>
+            <strong>Roberto Ferreira</strong>
+            <span>Cliente há 8 anos · Três Corações</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FORTE -->
+<section class="cta-forte">
+  <div class="container fade-in">
+    <div class="urgencia"><span class="pulse"></span> Atendimento rápido — peça agora mesmo</div>
+    <h2>Sua água de qualidade está a um clique de distância</h2>
+    <p>Não perca tempo. Fale conosco no WhatsApp e garanta sua entrega hoje mesmo. Atendimento personalizado para você e sua empresa.</p>
+    <a href="https://wa.me/5535988686022?text=Olá!%20Quero%20fazer%20um%20pedido%20agora." target="_blank" class="btn btn-primary">
+      <i class="fab fa-whatsapp"></i> Pedir no WhatsApp Agora
+    </a>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="container">
+    <div class="contato-grid">
+      <div class="contato-info fade-in">
+        <span class="section-tag">Fale Conosco</span>
+        <h2>Estamos prontos para <span>atender você</span></h2>
+        <p>Entre em contato pelos canais abaixo. Atendemos rapidamente via WhatsApp.</p>
+
+        <div class="contato-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/5535988686022?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank">(35) 98868-6022</a>
+          </div>
+        </div>
+
+        <div class="contato-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <strong>Telefone Fixo</strong>
+            <a href="tel:+553532141736">(35) 3214-1736</a>
+          </div>
+        </div>
+
+        <div class="contato-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Endereço</strong>
+            <p>Fazenda Sete Capotes, S/N<br>Zona Rural, Varginha/MG</p>
+          </div>
+        </div>
+
+        <div class="contato-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <strong>Horário de Funcionamento</strong>
+            <p>Segunda a Quinta: 07h30 às 17h00<br>Sexta: 07h30 às 16h00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mapa fade-in">
+        <iframe
+          src="https://www.google.com/maps?q=Fazenda+Sete+Capotes+Varginha+MG&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa Água Mineral Varginha">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="https://aguamineralvarginha.com.br/wp-content/uploads/2020/04/13.-logo_amv_original.png" alt="Logo">
+          <strong>Água Mineral<br>Varginha</strong>
+        </div>
+        <p>Pureza direto da fonte, tradição e qualidade para famílias e empresas de Varginha e região.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5535988686022" target="_blank"><i class="fab fa-whatsapp"></i> (35) 98868-6022</a></li>
+          <li><a href="tel:+553532141736"><i class="fas fa-phone"></i> (35) 3214-1736</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Fazenda Sete Capotes, Varginha/MG</li>
+          <li><i class="fas fa-clock"></i> Seg-Qui 07h30-17h | Sex 07h30-16h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Água Mineral Varginha. Todos os direitos reservados. · Pureza e qualidade de Varginha para você.
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5535988686022?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  // Header scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile menu
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
+  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('active')));
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
